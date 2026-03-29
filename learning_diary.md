@@ -82,5 +82,19 @@
 * Lopputuloksena sain toimivan React- ja Vite-pohjaisen frontendin, joka käynnistyy lokaalisti, menee läpi build-vaiheesta ja käyttää oikeaa Rahdissa julkaistua backendia HTTPS-yhteyden kautta.
 * Tämä tehtävä tuntui hyvältä jatkumolta aiempaan GitHub Pages -tehtävään, koska ensin opeteltiin staattisen sivun julkaisu ja sen jälkeen siirryttiin build-prosessia hyödyntävään framework-projektiin sekä oikeaan backend-integraatioon.
 
+## Frontendin julkaisu GitHub Pagesiin
+* Lopuksi frontend julkaistiin GitHub Pagesiin HTTPS:n yli.
+* Frontendille tehtiin oma repository, koska GitHub Pagesin ilmaisessa versiossa julkaisu toimii käytännössä vain, jos projekti on repon juuressa ja public.
+* Tätä varten projektiin lisättiin gh-pages-kirjasto sekä deploy-scriptit package.json-tiedostoon.
+* Lisäksi vite.config.js-tiedostoon määritettiin base-polku, jotta sovellus toimii oikein GitHub Pagesin alihakemistossa.
+* Julkaisu tehtiin komennolla:
+npm run deploy
+* Tämä rakensi projektin dist-kansioon ja puski sen gh-pages-haaraan, josta
+* GitHub Pages palveli valmiin sivun.
+* lopputuloksena frontend toimii suoraan selaimessa osoitteessa:
+https://tokontti2025.github.io/CloudComputing-mod4_Frontend/
+* Frontend käyttää suoraan Rahdissa julkaistua backendia HTTPS-yhteyden yli, joten koko sovellus toimii ilman paikallista ympäristöä.
+
+
 ##  Tekoälyn käyttö
 Tekoälyä (OpenAI ChatGPT, malli GPT-5.4) käytettiin projekteissa oppimisen ja virheenkorjauksen tukena. Lisäksi tekoälyä hyödynnettiin tekstin ja dokumentaation selkeyttämiseen, jotta projektin rakenne ja selitykset olisivat mahdollisimman ymmärrettäviä. Tekoälyn käyttö rajoittui oppimisen ja tekijän oman työn tukemiseen, eikä sitä käytetty tehtävän automaattiseen ratkaisemiseen.
